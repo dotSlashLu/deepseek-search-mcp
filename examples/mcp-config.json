@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "deepseek-search-stdio": {
+      "command": "/absolute/path/to/deepseek-search",
+      "env": {
+        "DEEPSEEK_API_KEY": "sk-xxxxxxxxxxxxxxxx",
+        "MCP_LOG_LEVEL": "info"
+      }
+    },
+    "deepseek-search-http": {
+      "type": "http",
+      "url": "http://127.0.0.1:8080/mcp",
+      "headers": {
+        "Authorization": "Bearer my-http-auth-token"
+      }
+    }
+  }
+}
