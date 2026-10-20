@@ -25,6 +25,18 @@ go install github.com/dotSlashLu/deepseek-search-mcp@latest
 
 需要 Go >= 1.25（官方 MCP Go SDK 的要求）。交叉编译（`make release`）产出各平台单文件二进制，无运行时依赖。
 
+不想装 Go 的话，直接从 [Releases](https://github.com/dotSlashLu/deepseek-search-mcp/releases/latest) 下载对应平台的压缩包，解压即得 `deepseek-search`。
+
+## 让 Agent 帮你装
+
+把这段丢给 Agent（Claude Code / Cursor / Codex 都行），选包、安装、注册它自己会搞定：
+
+```text
+帮我装一下 deepseek-search 这个 MCP server：https://github.com/dotSlashLu/deepseek-search-mcp/releases/latest
+装到 ~/.local/bin，用 stdio 注册到我的 MCP 客户端，DEEPSEEK_API_KEY=<DEEPSEEK_KEY>（没填就问我）；下载后用同目录的 checksums.txt 校验 SHA256。
+装完确认 tools/list 里有 deepseek_search 和 deepseek_fetch，再搜一次 "hello world" 给我看。
+```
+
 ## 使用
 
 ### stdio

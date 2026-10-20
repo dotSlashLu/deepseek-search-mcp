@@ -25,6 +25,18 @@ go install github.com/dotSlashLu/deepseek-search-mcp@latest
 
 Requires Go >= 1.25 (imposed by the official MCP Go SDK). `make release` cross-compiles single-file binaries for every supported platform; there are no runtime dependencies.
 
+No Go toolchain? Grab the archive for your platform from [Releases](https://github.com/dotSlashLu/deepseek-search-mcp/releases/latest); it contains the `deepseek-search` binary.
+
+## Install with your agent
+
+Hand this to your agent (Claude Code, Cursor, Codex — any of them); it will pick the package, install and register it:
+
+```text
+Install the deepseek-search MCP server from https://github.com/dotSlashLu/deepseek-search-mcp/releases/latest
+Put it in ~/.local/bin and register it with my MCP client over stdio, DEEPSEEK_API_KEY=<DEEPSEEK_KEY> (ask me if blank); verify the download against checksums.txt from the same page.
+Then confirm tools/list shows deepseek_search and deepseek_fetch, and run a "hello world" search for me.
+```
+
 ## Usage
 
 ### stdio
